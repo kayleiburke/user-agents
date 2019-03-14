@@ -1,5 +1,4 @@
 <h1>User Agent Logs</h1>
-<p><%= @current_user_agent %></p>
 <p>
   <table>
     <tr>
@@ -9,7 +8,7 @@
       <th>Updated At</th>
     </tr>
     <% @user_agent_logs.each do |user_agent_log| %>
-        <tr>
+        <tr class="<%= @user_agent_log.id == user_agent_log.id ? 'boldRow' : ''%>">
           <td><%= user_agent_log.user_agent %></td>
           <td><%= user_agent_log.count %></td>
           <td><%= user_agent_log.created_at %></td>
