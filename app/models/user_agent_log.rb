@@ -1,0 +1,3 @@
+class UserAgentLog < ApplicationRecord
+
+end
