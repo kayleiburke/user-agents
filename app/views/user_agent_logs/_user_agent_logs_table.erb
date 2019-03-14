@@ -1,0 +1,22 @@
+<div style="padding-top: 10px;" id="user-agent-logs-table">
+  <table>
+    <tr>
+      <th>User Agent</th>
+      <th>Count</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+    <% @user_agent_logs.each do |user_agent_log| %>
+        <tr class="<%= @user_agent_log.id == user_agent_log.id ? 'boldRow' : ''%>">
+          <td><%= user_agent_log.user_agent %></td>
+          <td><%= user_agent_log.count %></td>
+          <td><%= user_agent_log.created_at.strftime('%Y-%m-%d %I:%M:%S') %></td>
+          <td><%= user_agent_log.updated_at.strftime('%Y-%m-%d %I:%M:%S') %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <div class="pull-right">
+    <p>Table updated at <%= DateTime.now.strftime('%Y-%m-%d %I:%M:%S') %></p>
+  </div>
+</div>

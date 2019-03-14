@@ -1,19 +1,5 @@
 <h1>User Agent Logs</h1>
 <p>
-  <table>
-    <tr>
-      <th>User Agent</th>
-      <th>Count</th>
-      <th>Created At</th>
-      <th>Updated At</th>
-    </tr>
-    <% @user_agent_logs.each do |user_agent_log| %>
-        <tr class="<%= @user_agent_log.id == user_agent_log.id ? 'boldRow' : ''%>">
-          <td><%= user_agent_log.user_agent %></td>
-          <td><%= user_agent_log.count %></td>
-          <td><%= user_agent_log.created_at %></td>
-          <td><%= user_agent_log.updated_at %></td>
-        </tr>
-    <% end %>
-  </table>
+  <%= link_to 'Refresh Table', user_agent_logs_path, :remote => true, class: 'button' %>
+  <%= render partial: 'user_agent_logs/user_agent_logs_table', locals: { user_agent_logs: @user_agent_logs, user_agent_log: @user_agent_log} %>
 </p>
