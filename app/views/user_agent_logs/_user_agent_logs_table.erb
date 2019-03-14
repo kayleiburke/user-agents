@@ -10,13 +10,13 @@
         <tr class="<%= @user_agent_log.id == user_agent_log.id ? 'boldRow' : ''%>">
           <td><%= user_agent_log.user_agent %></td>
           <td><%= user_agent_log.count %></td>
-          <td><%= user_agent_log.created_at.strftime('%Y-%m-%d %I:%M:%S') %></td>
-          <td><%= user_agent_log.updated_at.strftime('%Y-%m-%d %I:%M:%S') %></td>
+          <td><%= local_time(user_agent_log.created_at, '%B %e, %Y %l:%M:%S %P') %></td>
+          <td><%= local_time(user_agent_log.updated_at, '%B %e, %Y %l:%M:%S %P') %></td>
         </tr>
     <% end %>
   </table>
 
   <div class="pull-right">
-    <p>Table updated at <%= DateTime.now.strftime('%Y-%m-%d %I:%M:%S') %></p>
+    <p>Table updated at <%= local_time(DateTime.now.strftime, '%B %e, %Y %l:%M:%S %P') %></p>
   </div>
 </div>
