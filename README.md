@@ -12,8 +12,6 @@
 >Add an index page that shows a sorted list of user agents and their timestamps and counters.
 >
 >Add a button to the index page that uses ajax to refresh the table from the server without doing a complete page refresh.
->
->(This exercise should not take too long)
 
 
 ## Getting Started
