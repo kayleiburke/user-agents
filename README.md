@@ -1,7 +1,7 @@
 # README
 
 ## Project Specifications
-**Here are the instructions I was given by the client prior to creating the app:**
+**Here are the instructions I was given prior to creating the app:**
 
 >Create a new Rails app that keeps track of the user agents used to access it.
 >
